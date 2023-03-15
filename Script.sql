@@ -63,3 +63,4 @@ SELECT first_name AS "Имя", MIN(age) AS "Самый юный возраст" 
 SELECT first_name, MAX(age) AS "Максимальный возраст" FROM employee 
  WHERE first_name IN (SELECT first_name FROM employee GROUP BY first_name HAVING COUNT(*) > 1) 
  GROUP BY first_name ORDER BY "Максимальный возраст" ASC;
+ 
